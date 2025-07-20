@@ -12,8 +12,8 @@ none='\e[0m'
 green='\e[32m'
 yellow='\e[33m'
 file=$1
-
 #check whether user passed any argument
+
 
 if [[ -f $1 ]]
 then
