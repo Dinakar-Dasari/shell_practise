@@ -26,5 +26,5 @@ then
     done
 else
     echo "invalid path"
-    exit 1
+    exit 1 
 fi            
