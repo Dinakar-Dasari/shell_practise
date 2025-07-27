@@ -1,0 +1,4 @@
+tiger
+tiger tiger
+tiger.tiger
+tiger+tiger
