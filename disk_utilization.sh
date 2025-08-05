@@ -14,8 +14,8 @@ while IFS= read -r file
 do
   usage=$(echo "$file" | awk '{print $6}' | tr -d "%")
   file_system=$(echo "$file" | awk '{print $1}') 
-  if [ $usage -gt $threshold ]
+  if (( usage > threshold ))
   then
-    echo "Filesystem $filesystem has High disk usage of $usage%..please check" &>> $log_file
+    echo "Filesystem "$file_system" has High disk usage of $usage%..please check" &>> $log_file
   fi 
 done <<< "$disk_command"

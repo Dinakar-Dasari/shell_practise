@@ -25,15 +25,15 @@ why $
 ^[0-9]+ → Starts with digits (more flexible)  12abc is also becomes valid if not given $
 '
 
-if ! [[ $1 =~ ^[0-9]+$ ]]
+if ! [[ $number =~ ^[0-9]+$ ]]
 then
     echo -e "${red}Invalid input.Enter a valid integer ${none}"
     exit 1
 fi
 
-for (( i=0; i<=$1; i++ ))   # ican also write without space. Space is only for if
+for (( i=0; i<=number; i++ ))   # ican also write without space. Space is only for if
 do
-    if (($i%2==0))   ##(()) for mathametical operators
+    if (( i%2==0 ))   ##(()) for mathametical operators
     then
         even+="$i "
     else

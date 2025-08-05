@@ -23,7 +23,7 @@ threshold=80
 idle_percentage=$(top -bn1 | grep 'Cpu(s)' | awk '{print $8}')
 cpu_usage=$(echo "100 - $idle_percentage" | bc)  ##bc for basic calculation
 cpu_usage=$(printf "%.0f\n" "$cpu_usage")
-if [[ $cpu_usage > $threshold ]]
+if (( cpu_usage > threshold ))
 then
     echo -e "High CPU usage: ${red}$cpu_usage%${normal}"
 else
